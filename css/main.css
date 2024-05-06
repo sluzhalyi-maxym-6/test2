@@ -1,0 +1,355 @@
+@import url("https://fonts.cdnfonts.com/css/finland");
+/*@mixin mixin2 {
+    position: absolute; 
+    top: 7vw; 
+    left: 13%; 
+    transform: translate(-50%, -50%); 
+    padding: 20px; 
+    color: white;
+}*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Finland", sans-serif;
+  font-size: 50px;
+}
+
+body {
+  background-color: #0e314f;
+}
+
+nav {
+  height: 200px;
+  background: #0e314f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem calc((100vw - 1600px) / 2);
+}
+nav .logo {
+  margin-right: 50px;
+}
+nav div.nav-items a {
+  justify-content: space-between;
+  margin-right: 25px;
+  font-size: 55px;
+  display: inline-block;
+  padding-bottom: 0.1rem;
+  position: relative;
+}
+nav div.nav-items a:link, nav div.nav-items a:visited {
+  text-decoration: none;
+  color: #010822;
+}
+nav div.nav-items a:hover {
+  color: white;
+  transition: 0.3s;
+}
+nav div.nav-items a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.25s ease-in-out;
+  transform: scale(0);
+}
+nav div.nav-items a:hover::after {
+  transform: scale(1);
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #010822;
+}
+
+.left1 {
+  position: relative;
+  width: 100%;
+}
+.left1 img {
+  width: 100%;
+  display: block;
+}
+.left1 h1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  font-size: 6vw;
+  left: 56%;
+  top: 15%;
+}
+.left1 p {
+  margin-top: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 55%;
+  left: 63%;
+  padding: 2vw;
+}
+
+.right1 {
+  position: relative;
+  width: 100%;
+}
+.right1 img {
+  width: 100%;
+  display: block;
+}
+.right1 h1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  font-size: 6vw;
+  left: 26.5%;
+  top: 25%;
+}
+.right1 p {
+  margin-top: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 50%;
+  left: 30%;
+  right: 25%;
+  padding: 2vw;
+}
+
+.button1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 73%;
+  right: 44.5%;
+  cursor: url("cursorr.png"), auto;
+  background-color: transparent;
+  color: white;
+  border: 0.3vw solid white;
+  padding: 0.5vw 1.5vw;
+  font-size: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.left2 {
+  position: relative;
+  width: 100%;
+}
+.left2 img {
+  width: 100%;
+  display: block;
+}
+.left2 h1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  font-size: 6vw;
+  left: 57.9%;
+  top: 15%;
+}
+.left2 p {
+  margin-top: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 55%;
+  left: 63%;
+  padding: 2vw;
+}
+
+.right2 {
+  position: relative;
+  width: 100%;
+}
+.right2 img {
+  width: 100%;
+  display: block;
+}
+.right2 h1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  font-size: 6vw;
+  left: 15.6%;
+  top: 25%;
+}
+.right2 p {
+  margin-top: 10px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 50%;
+  left: 30%;
+  right: 25%;
+  padding: 2vw;
+}
+
+.button2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  font-size: 3vw;
+  top: 73.5%;
+  right: 45.2%;
+  cursor: url("cursorr.png"), auto;
+  background-color: transparent;
+  color: white;
+  border: 0.3vw solid white;
+  padding: 0.5vw 1.5vw;
+  font-size: 3vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main {
+  background-color: #010822;
+  color: white;
+  height: 100%;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.container form {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 800px;
+}
+.container form fieldset {
+  width: 100%;
+  border-radius: 5px;
+}
+.container form fieldset legend {
+  font-size: 80px;
+}
+.container form .frame {
+  padding: 5%;
+  padding-top: 0%;
+}
+.container form .inputBox {
+  margin-top: 20px;
+}
+.container form .inputBox p {
+  display: block;
+  padding-bottom: 5px;
+}
+.container form .inputBox input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #444;
+}
+.container form .flexbox {
+  display: flex;
+  gap: 15px;
+}
+.container form .flexbox .inputBox {
+  flex: 1 1 150px;
+  width: 20%;
+}
+.container form .submit-btn {
+  background-color: transparent;
+  color: white;
+  border: 5px solid white;
+  width: 100%;
+  font-size: 50px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.footer .footer-text {
+  text-align: center;
+  padding: 2% 30vw;
+}
+.footer .footer-text p {
+  color: white;
+  font-size: 1.5vw;
+}
+.footer .footer-text a:link, .footer .footer-text a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vw;
+}
+.footer .znachok {
+  padding-top: 1.5%;
+}
+.footer .socials {
+  padding-top: 1.5%;
+}
+
+/*.footer {
+    width: 100%;
+    //height: 25vw;
+    padding-top: 5vh;
+    display: flex; 
+    justify-content: center;
+    position: relative; 
+    .footer-text {
+        text-align: center;
+        position: absolute; 
+        top: 30vh;
+        padding-bottom: 5vh; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        p {
+            color: white;
+            font-size: 30px;
+        }
+        a:link, a:visited {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
+    }
+
+}
+
+.znachok {
+    position: absolute; 
+    //margin-top: 5vh;
+}
+.socials {
+    position: absolute; 
+    //margin-top: 20vh; 
+    padding-top: 15vh;
+}*/
+/*.znachok {
+    width: 10vw;
+    height: 10vw;
+}*//*# sourceMappingURL=main.css.map */

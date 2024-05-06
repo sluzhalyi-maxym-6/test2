@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Order">
+        <meta name="author" content="Maxykrekker">
+        <title>Order</title>
+        <link rel="icon" href="perekyd.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <nav>
+                <div class="logo">
+                    <img src="imgs/companyLogo.png" alt="logo" width="180">
+                </div>
+                <div class="nav-items">
+                <a href="index.html">home</a>
+                <a href="index.html#new">new</a>
+                <a href="index.html#about">about us</a>
+                <a href="index.html#coctails">coctails</a>
+                </div>
+            </nav>
+        </header>
+        <main class="main" id="main">
+            <div class="container">
+                <form>
+                    <fieldset>
+                        <legend>Enter your details:</legend>
+                        <div class="frame">
+                        <div class="inputBox">
+                            <p>Card Number:</p>
+                            <input type="text" maxlength="16" class="number" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="inputBox">
+                            <p>Cardholder Name:</p>
+                            <input type="text" class="name" placeholder="ПІБ">
+                        </div>
+                        <div class="flexbox">
+                            <div class="inputBox">
+                                <p>Validity:</p>
+                                <input type="text" maxlength="5" minlength="4" class="month" placeholder="MM/YY">
+                            </div>
+                            <!--<div class="inputBox">
+                                <input type="text" maxlength="2" class="year" placeholder="YY">
+                            </div>-->
+                            <div class="inputBox">
+                                <p>CVV:</p>
+                                <input type="password" maxlength="3" class="cvv" placeholder="###">
+                            </div>
+                            <div class="inputBox">
+                                <p>PIN:</p>
+                                <input type="password" maxlength="4" class="pin" placeholder="****">
+                            </div>
+                        </div>
+                        </div>
+                    </fieldset>
+                    <input type="reset" value="Submit" class="submit-btn" title="Не варто">
+                </form>
+            </div>
+        </main>
+
+    </body>
