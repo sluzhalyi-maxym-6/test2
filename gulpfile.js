@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
+const htmlPartial = require('gulp-html-partial');
 
 const sassSrc = './scss/**/*.scss';
 
@@ -13,6 +14,14 @@ function buildStyles() {
     .pipe(browserSync.stream());
 };
 
+function buildHtml() {
+  return gulp.src(['./*.html'])
+    .pipe(htmlPartial({
+      basePath: 'html-partials/'
+    }))
+    .pipe(gulp.dest('./dest'));
+};
+
 function serve() {
     browserSync.init({
       server: {
@@ -22,6 +31,7 @@ function serve() {
     gulp.watch(sassSrc, gulp.series('buildStyles'));
   };
 
+exports.buildHtml = buildHtml;
 exports.buildStyles = buildStyles;
 exports.serve = serve;
 
